@@ -1,12 +1,14 @@
 # asm-echo
-An example of getting command line arguments in x64 assembly in macOS by recreacting the 'echo' command.
+An example of pulling command line arguments in x64 assembly in macOS by recreacting the 'echo' command.
 
-# build
+**build**
+
 $ cd asm-echo/
 
 $ make
 
-# run
+**run**
+
 $ ./asm-echo Hello world! How are you today?
 
 $ Hello world! How are you today?
