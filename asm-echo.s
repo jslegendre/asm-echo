@@ -35,21 +35,21 @@ _main:
 	je .exit
 
 .printspace:					# Print space between words
-    mov $SPACE_LEN, %rdx
-    lea space(%rip), %rsi
-    mov $0x2000004, %rax
-    syscall
+        mov $SPACE_LEN, %rdx
+        lea space(%rip), %rsi
+        mov $0x2000004, %rax
+        syscall
 	jmp .argvforloop
 	
 .exit:
-    mov $NEWLINE_LEN, %rdx			
-    lea newline(%rip), %rsi
-    mov $0x1, %rdi
-    mov $0x2000004, %rax			# Print newline (\n)
-    syscall
+        mov $NEWLINE_LEN, %rdx			
+        lea newline(%rip), %rsi
+        mov $0x1, %rdi
+        mov $0x2000004, %rax			# Print newline (\n)
+        syscall
     
-    dec %rdi
-    mov $0x2000001, %rax
-    syscall					# exit(0)
+        dec %rdi
+        mov $0x2000001, %rax
+        syscall					# exit(0)
  
 
